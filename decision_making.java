@@ -1,5 +1,4 @@
 package decision_making;
-
 public class Solution {
 
     public static String compareNM(int n, int m) {
@@ -11,11 +10,9 @@ public class Solution {
             return "greater";
         }
     }
-
     public static void main(String[] args) {
         int n = 5;
         int m = 3;
-
         System.out.println(compareNM(n, m));
     }
 }
