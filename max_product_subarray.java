@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
     public int maxProduct(int[] arr) {
         int n=arr.length;
         int maxEndingHere=arr[0];
