@@ -1,24 +1,18 @@
 class Solution {
-    public int maxMinHeight(int[] arr, int k, int w) {
-        int n = arr.length;
-        
-        long low = Integer.MAX_VALUE;
-        long high = 0;
-        
-        for (int height : arr) {
-            low = Math.min(low, height);
-            high = Math.max(high, height);
+    public int maxMinHeight(int[] arr,int k,int w){
+        int n=arr.length;
+        long low=Integer.MAX_VALUE;
+        long high=0;
+        for (int height:arr) {
+            low=Math.min(low,height);
+            high=Math.max(high,height);
         }
-        
-        high = high + k; // maximum possible
-        
-        long ans = low;
-        
-        while (low <= high) {
-            long mid = low + (high - low) / 2;
-            
-            if (canAchieve(arr, k, w, mid)) {
-                ans = mid;
+        high=high+k;
+        long ans=low;
+        while(low<=high){
+            long mid=low+(high-low)/2;
+            if(canAchieve(arr,k,w,mid)){
+                ans=mid;
                 low = mid + 1;   // try bigger
             } else {
                 high = mid - 1;  // try smaller
